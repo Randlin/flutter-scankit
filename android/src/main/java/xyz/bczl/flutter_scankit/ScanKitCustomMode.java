@@ -122,6 +122,7 @@ public class ScanKitCustomMode implements LifecycleEventObserver, OnResultCallba
         int[] var2 = Arrays.copyOfRange(args, 1, args.length);
         builder.setFormat(var1, var2);
         builder.setContinuouslyScan((boolean) creationParam.get("continuouslyScan"));
+        builder.enableReturnBitmap();
 
         remoteView = builder.build();
         remoteView.setOnResultCallback(this);
